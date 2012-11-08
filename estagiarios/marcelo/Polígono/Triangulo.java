@@ -1,4 +1,4 @@
-package br.com.exercicios;
+package Poligono;
 
 public class Triangulo {
 
