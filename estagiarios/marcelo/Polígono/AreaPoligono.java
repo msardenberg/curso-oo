@@ -1,4 +1,4 @@
-package br.com.exercicios;
+package Poligono;
 import java.util.Scanner;
 
 public class AreaPoligono {
@@ -9,17 +9,17 @@ public class AreaPoligono {
 			Scanner scan = new Scanner(System.in);
 			System.out.println("----- Menu Principal -----");		
 			System.out.println("0 - Sair do Programa");
-			System.out.println("1 - Círculo");
-			System.out.println("2 - Quadrilátero");
-	//		System.out.println("3 - Triângulo");
+			System.out.println("1 - Cï¿½rculo");
+			System.out.println("2 - Quadrilï¿½tero");
+	//		System.out.println("3 - Triï¿½ngulo");
 
-			String opçao = scan.nextLine();
+			String opï¿½ao = scan.nextLine();
 			int opcaoInt;
 
 			try{
-				opcaoInt = Integer.parseInt(opçao);
+				opcaoInt = Integer.parseInt(opï¿½ao);
 			}catch (Exception e) {
-				System.out.println("Opcão inválida...Tente novamente.");
+				System.out.println("Opcï¿½o invï¿½lida...Tente novamente.");
 				continue tipoPoligonoWhile;
 			}
 
@@ -40,7 +40,7 @@ public class AreaPoligono {
 				Triangulo triangulo = new Triangulo();
 				continue tipoPoligonoWhile;
 			default:
-				System.out.println("Opção inválida...Tente novamente.");
+				System.out.println("Opï¿½ï¿½o invï¿½lida...Tente novamente.");
 				continue tipoPoligonoWhile
 				;
 			}
