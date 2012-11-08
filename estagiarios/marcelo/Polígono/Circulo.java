@@ -1,5 +1,4 @@
-package br.com.exercicios;
-
+package Poligono;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -30,18 +29,18 @@ public class Circulo {
 		Scanner scan = new Scanner(System.in);
 		
 		raioWhile: while(true){
-			System.out.print("informe o Raio do círculo: ");
+			System.out.print("informe o Raio do cï¿½rculo: ");
 			String raioString = scan.nextLine();
 			try{
 				setRaio(Double.parseDouble(raioString));
 				break raioWhile;
 			}catch (Exception e) {
-				System.out.println("Informe um Raio válido");
+				System.out.println("Informe um Raio vï¿½lido");
 				continue raioWhile;
 			}
 		}
 		setAreaCirculo(Math.PI * Math.pow(getRaio(),2));
-		System.out.println("Área do círculo: " + decimal.format(getAreaCirculo()));
+		System.out.println("ï¿½rea do cï¿½rculo: " + decimal.format(getAreaCirculo()));
 	}
 
 }
