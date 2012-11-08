@@ -1,4 +1,4 @@
-package br.com.exercicios;
+package Poligono;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -39,13 +39,13 @@ public class Quadrilatero {
 			try{
 				double ladoADouble = Double.parseDouble(ladoAString);
 				if(ladoADouble < 0){
-					System.out.println("* Números negativos não são válidos *");
+					System.out.println("* Nï¿½meros negativos nï¿½o sï¿½o vï¿½lidos *");
 					continue getLadoAWhile;
 				}
 				setLadoA(ladoADouble);
 				break getLadoAWhile;
 			}catch (Exception e) {
-				System.out.println("* Informe um valor válido *");
+				System.out.println("* Informe um valor vï¿½lido *");
 				continue getLadoAWhile;
 			}
 		}
@@ -56,13 +56,13 @@ public class Quadrilatero {
 			try{
 				double ladoBDouble = Double.parseDouble(ladoBString);
 				if(ladoBDouble < 0){
-					System.out.println("* Números negativos não são válidos *");
+					System.out.println("* Nï¿½meros negativos nï¿½o sï¿½o vï¿½lidos *");
 					continue getLadoBWhile;
 				}
 				setLadoB(ladoBDouble);
 				break getLadoBWhile;
 			}catch (Exception e) {
-				System.out.println("* Informe um valor válido *");
+				System.out.println("* Informe um valor vï¿½lido *");
 				continue getLadoBWhile;
 			}
 		}
@@ -72,7 +72,7 @@ public class Quadrilatero {
 				if (getLadoA()==getLadoB()) {
 					tipoQuadrilatero = "Quadrado";
 				}else {
-					tipoQuadrilatero = "Retângulo";
+					tipoQuadrilatero = "Retï¿½ngulo";
 				}
 				return tipoQuadrilatero;
 			}
@@ -81,8 +81,8 @@ public class Quadrilatero {
 				getLados();
 				setAreaQuadrilatero(getLadoA() * getLadoB());
 
-				System.out.println("Tipo do Quadrilátero: " + getTipoQuadrilatero());
-				System.out.println("Área: " + decimal.format(getAreaQuadrilatero()));
+				System.out.println("Tipo do Quadrilï¿½tero: " + getTipoQuadrilatero());
+				System.out.println("ï¿½rea: " + decimal.format(getAreaQuadrilatero()));
 			}
 
 		}
