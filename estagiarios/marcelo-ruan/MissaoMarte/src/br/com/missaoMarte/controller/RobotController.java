@@ -7,7 +7,7 @@ import br.com.missaoMarte.model.Plateau;
 import br.com.missaoMarte.model.Robot;
 
 /**
- * Controla as ações possiveis do robô
+ * Controla as aÃ§Å‘es possiveis do robÃ´
  * @author Marcelo e Ruan
  *
  */
@@ -54,4 +54,3 @@ public class RobotController {
 		}
 	}
 }
-

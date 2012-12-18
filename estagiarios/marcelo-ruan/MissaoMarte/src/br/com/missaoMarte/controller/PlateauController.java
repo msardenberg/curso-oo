@@ -18,11 +18,11 @@ public class PlateauController {
 	 * @return se a coordenada possui um Robô ou não.
 	 */
 	public boolean isCoordinateEmpty(Plateau plateau, Coordinate coordinate){
-		
+
 		return plateau.getMapCoordinates().get(coordinate) == null;
 	}
-	
-	
+
+
 	/**
 	 * Método: coordenada no limite.
 	 * @param plateau
@@ -30,9 +30,9 @@ public class PlateauController {
 	 * @return se a coordenada está no limite do Plateau ou não.
 	 */
 	public boolean coordinateInLimit(Plateau plateau, Coordinate coordinate){
-		return coordinate.getX() <= plateau.getLimitCoordinate().getX() 
-		&& coordinate.getY() <= plateau.getLimitCoordinate().getY()
-		&& coordinate.getX() >= 0 
-		&& coordinate.getY() >= 0; 
+		return coordinate.getX() <= plateau.getLimitCoordinate().getX()
+				&& coordinate.getY() <= plateau.getLimitCoordinate().getY()
+				&& coordinate.getX() >= 0
+				&& coordinate.getY() >= 0;
 	}
 }

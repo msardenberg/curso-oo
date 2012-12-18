@@ -6,10 +6,10 @@ public class Coordinate {
 		this.x = x;
 		this.y = y;
 	}
-	
+
 	private Integer x;
 	private Integer y;
-	
+
 	public Integer getX() {
 		return x;
 	}
@@ -22,7 +22,7 @@ public class Coordinate {
 	public void setY(Integer y) {
 		this.y = y;
 	}
-	
+
 	@Override
 	public String toString() {
 		return this.x + " " +this.y;

@@ -10,20 +10,20 @@ import java.util.Map;
  */
 public class Plateau {
 
-	
+
 	/**
 	 * Constroi o Plateau com o tamanho máximo.
 	 */
 	public Plateau(Coordinate limitCoordinate) {
 		this.limitCoordinate = limitCoordinate;
 	}
-	
+
 	private Coordinate limitCoordinate;
-	
+
 	private Map<Coordinate, Robot> mapCoordinates = new HashMap<Coordinate, Robot>();
 
 
-	
+
 	public Coordinate getLimitCoordinate() {
 		return limitCoordinate;
 	}
@@ -40,5 +40,5 @@ public class Plateau {
 		this.mapCoordinates = mapCoordinates;
 	}
 
-	
+
 }
