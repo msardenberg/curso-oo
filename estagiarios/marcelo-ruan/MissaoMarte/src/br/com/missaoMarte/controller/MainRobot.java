@@ -27,6 +27,8 @@ public class MainRobot {
 		Plateau plateau = null;
 		Robot robotAlpha = new Robot("Marcelo");
 		Robot robotBeta = new Robot("Ruan");
+		RobotController robotController = new RobotController();
+		PlateauController plateauController = new PlateauController();
 		
 		for (int i = 0; i < listFileLines.size(); i++) {
 			
@@ -40,24 +42,26 @@ public class MainRobot {
 		
 			}else if(i == 1){   
 				String[] lineCoordinatesAlpha = listFileLines.get(i).split(" ");
-				RobotController.moveRobotByCoordinate(plateau, robotAlpha, lineCoordinatesAlpha, i);
+				robotController.moveRobotByCoordinate(plateau, plateauController, robotAlpha, lineCoordinatesAlpha, i);
 			
 			}else if(i == 2){   
 			
 				for (int j = 0; j < listFileLines.get(i).length(); j++) {
 					String lineCommandAlpha = String.valueOf(listFileLines.get(i).charAt(j));
-					RobotController.command(robotAlpha, CommandEnum.valueOf(lineCommandAlpha));
-					
+					robotController.commandController(robotAlpha, CommandEnum.valueOf(lineCommandAlpha), 
+							robotAlpha.getCoordinate(), plateau, plateauController, robotAlpha.getCardial());
 				}
 		
 			}else if(i == 3){
 				String[] lineCoordinatesBeta = listFileLines.get(i).split(" ");
-				RobotController.moveRobotByCoordinate(plateau, robotBeta, lineCoordinatesBeta, i);
+				robotController.moveRobotByCoordinate(plateau, plateauController, robotBeta, lineCoordinatesBeta, i);
 			
 			}else if(i == 4){
+				
 				for (int j = 0; j < listFileLines.get(i).length(); j++) {
 					String lineCommandBeta = String.valueOf(listFileLines.get(i).charAt(j));
-					RobotController.command(robotBeta, CommandEnum.valueOf(lineCommandBeta));
+					robotController.commandController(robotBeta, CommandEnum.valueOf(lineCommandBeta), 
+							robotBeta.getCoordinate(), plateau, plateauController, robotBeta.getCardial());
 				}
 			}
 		}

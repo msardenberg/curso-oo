@@ -16,7 +16,7 @@ public class Coordinate {
 	public void setX(Integer x) {
 		this.x = x;
 	}
-	public Integer getY() {
+	public Integer getY(){
 		return y;
 	}
 	public void setY(Integer y) {
@@ -27,21 +27,4 @@ public class Coordinate {
 	public String toString() {
 		return this.x + " " +this.y;
 	}
-	
-//	@Override
-//	public boolean equals(Object obj) {
-//		if(obj == null || !(obj instanceof Coordinate)){
-//			return false;
-//		}
-//		
-//		Coordinate c = (Coordinate)obj;
-//		
-//		if(c.getX() == getX() && c.getY() == getY()){
-//			return true;
-//		}else{
-//			return false;
-//		}
-//	}
-	
-	
 }
