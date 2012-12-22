@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified"
+elementFormDefault="qualifield"
+targetNamespace="http://www.ideias.com.br/aulaWebservice"
+xmlns:tns="http://www.ideias.com.br/aulaWebservice/dadoPessoal"
+xmlns:nsCPF="http://www.ideias.com.br/aulaWebservice/validaCPF" 
+xmlns:ns="http://www.ideias.com.br/aulaWebservice/dadoEndereco">
+
+
+	<nsCPF:simpleType name="CPF">
+		<xsd:restriction base="xsd:string" >
+			<xsd:pattern value="[0-9]{3}[.]{1}[0-9]{3}[.]{1}[0-9]{3}-[0-9]{2}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	
+	<ns:complextype name="Endereco">
+		<ns:sequence>
+			<xs:element name="Rua" type="ns:String" minOccurs="1"/>
+			<xs:element name="numero" type="ns:String" minOccurs="1" maxOccurs="underbound"/>
+			<xs:element name="complemento" type="ns:String" maxOccurs="underbound"/>
+			<xs:element name="bairro" type="ns:String" minOccurs="1"/>
+			<xs:element name="cidade" type="ns:String" minOccurs="1"/>	
+		<ns:sequence>
+		
+		
+	<xs:complextype name="Pessoa">
+		<xs:sequence>
+			<xs:element name="Francisco" type="tns:String" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dt_nasci" type="tns:dateTime" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="cpf" type="nsCPF:CPF" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="endereco" type="ns:Endereco" minOccurs="1"/>
+			<xs:element name="naturalidade" type="tns:String" minOccurs="1"/>
+			<xs:element name="nacionalidade" type="tns:String" minOccurs="1"/>
+		<xs:sequence>
+
+	
+	<tns:element name="pessoa" type="tns:Pessoa"/>
+	<ns:element name="endereco" type="ns:Endereco"/>
